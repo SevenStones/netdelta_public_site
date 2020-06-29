@@ -1,0 +1,112 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+<title>{% block title %}NetDelta{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="Differential port scanning and deltas" name="description" />
+    <meta name="google-site-verification" content="zE9FvWb-I57vdRFs3D43arGcEQpy4rJO0NDijoAYKGc" />
+    <meta name="Revisit-After" content="7 days" />
+    <meta name="keywords" content="information security, nmap deltas, port scan deltas, differential port scans, differential nmap scans" />
+    <meta name="robots" content="index, follow, all" />
+    <meta name="Author" content="Ian Tibble" />
+  
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="{% static "admin/assets/plugins/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" />
+    <link href="{% static "admin/assets/plugins/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" />
+    <link href="{% static "admin/assets/css/animate.min.css" %}" rel="stylesheet" />
+    <link href="{% static "admin/assets/css/style.min.css" %}" rel="stylesheet" />
+{% comment %}    <link href="{% static "admin/assets/css/other.css" %}" rel="stylesheet" />{% endcomment %}
+    <link href="{% static "admin/assets/css/style-responsive.min.css" %}" rel="stylesheet" />
+    <link href="{% static "admin/assets/css/theme/default.css" %}" id="theme" rel="stylesheet" />
+    <link href="{% static "admin/assets/css/custom.css" %}" rel="stylesheet" />
+  <!-- ================== END BASE CSS STYLE ================== -->
+
+  {#  ====================== Favicon =========================#}
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static "admin/assets/favicon/apple-icon-57x57.png" %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "admin/assets/favicon/apple-icon-60x60.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "admin/assets/favicon/apple-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "admin/assets/favicon/apple-icon-76x76.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "admin/assets/favicon/apple-icon-114x114.png" %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "admin/assets/favicon/apple-icon-120x120.png" %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "admin/assets/favicon/apple-icon-144x144.png" %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "admin/assets/favicon/apple-icon-152x152.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "admin/assets/favicon/apple-icon-180x180.png" %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static "admin/assets/favicon/android-icon-192x192.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "admin/assets/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "admin/assets/favicon/favicon-96x96.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "admin/assets/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "admin/assets/favicon/manifest.json" %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static "admin/assets/favicon/ms-icon-144x144.png" %}">
+    <meta name="theme-color" content="#ffffff">
+  {#  ====================== End Favicon =========================#}
+
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="{% static "admin/assets/plugins/pace/pace.min.js" %}"></script>
+  <!-- ================== END BASE JS ================== -->
+    <style>
+
+    input {
+        border: 2px solid #ccd0d4;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 12px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+    textarea {
+        border: 2px solid #ccd0d4;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 12px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+    .display-3 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    }
+
+    .text-xs-center {
+    text-align: center!important;
+    }
+
+
+    .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    }
+
+    </style>
+</head>
+
+{% block content %}{% endblock content %}
+
+{% block footing  %}
+<!-- ================== BEGIN BASE JS ================== -->
+  <script src="{% static "admin/assets/plugins/jquery/jquery-1.9.1.min.js" %}"></script>
+  <script src="{% static "admin/assets/plugins/jquery/jquery-migrate-1.1.0.min.js" %}"></script>
+  <script src="{% static "admin/assets/plugins/bootstrap/js/bootstrap.min.js" %}"></script>
+  <!--[if lt IE 9]>
+    <script src="{% static "admin/assets/crossbrowserjs/html5shiv.js" %}"></script>
+    <script src="{% static "admin/assets/crossbrowserjs/respond.min.js" %}"></script>
+    <script src="{% static "admin/assets/crossbrowserjs/excanvas.min.js" %}"></script>
+  <![endif]-->
+  <script src="{% static "admin/assets/plugins/scrollMonitor/scrollMonitor.js" %}"></script>
+  <script src="{% static "admin/assets/js/apps.min.js" %}"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <script>  
+    $(document).ready(function() {
+    App.init();
+
+    });
+  </script>
+{% endblock footing %}
+</body>
+</html>

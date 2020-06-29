@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'z)o&=q7vt&-$l-2fk0i17lpr)m!y$a(v7+%t)tmfi&41d19=$p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+#DEBUG = True
 
 # Application definition
 
@@ -53,7 +54,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            '/home/iantibble/jango/ndwww/templates',
+            BASE_DIR + '/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -79,7 +80,7 @@ DATABASES = {
         'NAME': 'ndwww',                  # Not used with sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': 'ankSQL4r4',
-        'OPTIONS': dict(init_command="SET sql_mode='STRICT_TRANS_TABLES'"),
+        'OPTIONS': dict(init_command="SET sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER'"),
     }
 }
 
@@ -122,14 +123,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/iantibble/jango/ndwww/ndwww/admin'
+STATIC_ROOT = BASE_DIR + '/ndwww/admin'
 
 # Additional locations of static files
 STATICFILES_DIRS = [
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/iantibble/jango/ndwww/ndwww',
+    BASE_DIR + '/ndwww',
 ]
 
 # Static files (CSS, JavaScript, Images)
@@ -143,4 +144,4 @@ STATICFILES_FINDERS = (
 LOGIN_URL='/admin/'
 #LOGIN_REDIRECT_URL='/scan/'
 
-ALLOWED_HOSTS = ['newvm', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['bionic', 'localhost', '127.0.0.1', 'www.netdelta.io']

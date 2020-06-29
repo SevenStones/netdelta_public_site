@@ -1,0 +1,329 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% block content %}
+<body data-spy="scroll" data-target="#header-navbar" data-offset="51">
+    {% load static %}
+    <!-- begin #page-container -->
+    <div id="page-container" class="fade">
+        <!-- begin #header -->
+        <div id="header" class="header navbar navbar-inverse navbar-fixed-top">
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin navbar-header -->
+                <div class="navbar-header" style="padding-top: 5px; width: 300px">
+                        <div id="header-branding"><img src="{% static "/admin/assets/img/netdelta-logo.svg" %}"
+                                                    height="60" width="60" style="margin-right:10px" alt="Netdelta logo">Netdelta</div>
+                </div>
+                <!-- end navbar-header -->
+                <!-- begin navbar-collapse -->
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="#home" data-click="scroll-to-target">HOME</a></li>
+                        <li><a href="#about" data-click="scroll-to-target">ABOUT</a></li>
+                        <li><a href="#team" data-click="scroll-to-target">FAQ</a></li>
+                        <li><a href="#contact" data-click="scroll-to-target">ON-BOARDING</a></li>
+                        <li><a href="#contact" data-click="scroll-to-target">CONTACT</a></li>
+                    </ul>
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #header -->
+
+        <!-- begin #home -->
+        <div id="home" class="content has-bg home">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="{% static "admin/assets/img/home-bg.jpg" %}" alt="Home" />
+
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container home-content">
+                <h2 style="font-size: 45px">Detect perimeter changes before hackers detect them!</h2>
+                <p></p>
+                <h3>Periodic port scans - no false positives - analytics removes ndiff type noise</h3>
+                <h4>
+                    <strong>If your network perimeter changes unexpectedly, that's probably bad!</strong> Unauthorised change? Steve in networking
+                    misconfigured a firewall? Hacker's shell? Shadow IT? Rogue device? Post-M&A networking headaches? ...
+
+                </h4>
+                <p></p>
+                <h4 style="color: #f5dd5d">Seven Stones will host the SaaS solution for you: 100 GBP/month for up to 2 class Cs, or 1000 GBP/annum (20% off - includes results analysis) </h4>
+{% comment %}                    <h4>OR ...</h4>
+                <h4>DIY: <a href="https://www.seven-stones.biz/blog/netdelta-install-and-configure/">You can build it yourself</a> (no support)</h4>{% endcomment %}
+                <div style="width:100%;height: 30px"></div>
+                <a href="#about" class="btn btn-theme" data-click="scroll-to-target">Explore More</a> <a href="#contact" class="btn btn-outline">Sign me up!</a><br />
+                <br />
+
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #home -->
+
+        <!-- begin #about -->
+        <div id="about" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInDown">
+                <h2 class="content-title">About Netdelta</h2>
+                <h4 class="content-desc" style="text-align: left; margin-bottom: 10px">
+                A quarter of a century of defence has been based heavily on specific known threats. However these days there are
+                    too many to keep up with. As an example - AV based on known signatures has been shown to be easy
+                    to bypass repeatedly. Likewise Vulnerability Assessment based on CIS benchmarks cannot take into account
+                    0day issues, for which the economics of 0days dictate that plenty of them are in circulation.</h4>
+                    <h4 style="text-align: left; margin-bottom: 10px">So the concept of deltas wherein "something changed in my environment that i didn't expect - lets investigate"
+                    is a more foolproof means of threat detection - however a whole core network (think IDS deltas),
+                    or a whole operating system, is a threat space that is too complex and wide - there will be lots of noise
+                        in the form of false positives.</h4>
+                    <h4 style="text-align: left; margin-bottom: 20px">So then how about we focus on smaller targets that are less complex? Netdelta is based on deltas over groups
+                        of IP addresses, where changes in host availability, or service configuration, result in an alert being raised.</h4>
+
+
+
+                <!-- begin row -->
+                <div class="row">
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-6" style="width: 46%; margin-right: 45px">
+                        <!-- begin about -->
+                        <div class="about" style="font-size: 15px">
+                            <!--<h3>Periodic port scans on user-defined ranges</h3>-->
+                            <p>
+                            <ul>
+                                <li>Maintains scan history in a backend database and provides analytics.</li>
+                                <li>If there's an unexpected change, it could be the result of unauthorised activity:
+                                    hacking, malware, unauthorised change, shadow IT, etc.</li>
+                            <li>Netdelta maintains a history of past scans and deltas and grades
+                                (<span class="red">red</span>, <span class="amber">amber</span>, <span class="green">green</span>)
+                                on the likelihood that the delta is a false positive.</li>
+                                <li>The changes alerted - host up, host down, new group member, new host appears (maybe a rogue host,
+                                    unauthorised change, firewall misconfig), service(s) added, service(s) removed</li>
+                                <li>User-configurable email alerts.</li>
+                                <li>Schedule scans, or run instant scans against any configured group.</li>
+                                <li>User-configurable scan options.</li>
+                            </ul>
+
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <!-- end about -->
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-6">
+
+
+                        <img src="{% static "admin/assets/img/netdelta-screen3.png" %}" alt="Home" />
+
+                        </div>
+                        <!-- end about-author -->
+                    </div>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+
+                        <!-- end skills -->
+                    </div>
+                    <!-- end col-4 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+
+        <!-- end #about -->
+
+        <!-- begin #milestone -->
+        <div id="milestone" class="content bg-black-darker has-bg" data-scrollview="true">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="{% static "admin/assets/img/milestone-bg.jpg" %}" alt="Home" />
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container">
+                <!-- begin row -->
+                <div class="row">
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #milestone -->
+
+        <!-- begin #team -->
+        <div id="team" class="content" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+                <h2 class="content-title">Frequently Asked Questions</h2>
+
+                <!-- begin row -->
+                <div class="row" style="font-size: 15px">
+
+                    <!-- begin col-4 -->
+                    <div class="col-md-4 col-sm-4" style="width: 46%; margin-right: 45px">
+
+
+                            <h4>Can't I do the same thing with <a href="https://nmap.org/ndiff/">ndiff?</a></h4>
+
+                        <ul>
+                        <li style="margin-bottom:10px"><p style="font-size: 15px">With ndiff false positives are a problem: whenever a host or service times out, ndiff will flag what is probably
+                            a false positive. Host and service time outs happen a lot, even on a gigabit LAN - this makes something like a scripted solution impractical.</p>
+                           <p style="font-size: 15px">Netdelta maintains a database of service and host
+                        availability, and makes a call on how likely a service time out is a false positive (red, amber, green - see the screen sample on the right).
+                            When Netdelta sees a change, it checks first on the scan history of that host, and makes a call on how likely what you're seeing is just
+                               a time-out. Netdelta will stay quiet unless its sure its seeing a genuine delta.</p>
+                        </li>
+                        <li>Ndiff is based on a history of one previous scan XML file. Netdelta records in a database, which enable reporting and analytics,
+                        as well as the above-mentioned false positives checking. The user can configure a scan history of up to 100 previous scans.</li>
+                            <li>Moreover, for the price of Netdelta, why devote resources to an in-house scripted effort, with poor support and documentation?</li>
+
+                        </ul>
+
+    <h4>Isn't the same thing offered with <a href="https://www.tufin.com/">Tufin?</a></h4>
+
+                        <ul>
+                            <li>
+                                No. Tufin reports on changes in firewall rules. Your perimeter port scan results are your shop window. Changes in firewall rules don't necessarily reflect
+                                the view from the street of your shop window and its also what BOTs and hackers see when they are evaluating the "attackability" of your organisation. There can be an unauthorised change in firewall rules - that's bad, but it may or may not result in a change in your
+                                advertised perimeter services. Your port scan results for your shop window represent the absolute view.
+                            </li>
+                            <li>There's also a slight difference in pricing between Tufin and Netdelta.</li>
+                        </ul>
+                    <!-- end col-4 -->
+                    <!-- begin col-4 -->
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="border-left:1px #E0E0E0 solid; padding-left: 35px">
+
+                    <img src="{% static "admin/assets/img/netdelta-screen5.png" %}" alt="Home" />
+                    </div>
+
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+
+        <div id="action-box" class="content has-bg" data-scrollview="true">
+            <!-- begin content-bg -->
+            <div class="content-bg">
+                <img src="{% static "admin/assets/img/action-bg.jpg" %}" alt="Action" />
+
+            </div>
+            <!-- end content-bg -->
+            <!-- begin container -->
+            <div class="container" data-animation="true" data-animation-type="fadeInRight">
+                <!-- begin row -->
+                <div class="row action-box">
+                    <!-- begin col-9 -->
+                    <div class="col-md-9 col-sm-9">
+
+
+                    </div>
+                    <!-- end col-9 -->
+                    <!-- begin col-3 -->
+
+                    <!-- end col-3 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #action-box -->
+
+
+        <!-- end #work -->
+
+        <!-- begin #contact -->
+        <div id="contact" class="content bg-silver-lighter" data-scrollview="true">
+            <!-- begin container -->
+            <div class="container">
+
+
+                <!-- begin row -->
+                <div class="row" style="font-size: 15px">
+                    <!-- begin col-6 -->
+                    <div class="col-md-6" data-animation="true" data-animation-type="fadeInLeft">
+                        <h2 class="content-title">On-boarding</h2>
+                        <h3>Your one month trial starts here...</h3>
+                        <ul>
+                            <li>Pass us subnet CIDRs or individual addresses (we can work with text files,
+                                expand CIDRs, or just manually enter addresses) - we will validate.</li>
+                            <li>We register a new subdomain for your site under netdelta.io - this takes 24 hours to propagate.</li>
+                            <li>Email addresses for alerts.</li>
+                            <li>We provision your user accounts on your web portal.</li>
+                            <li>We setup a scheduled scan job to run in the early hours (in your local time zone), to run every 24 hours.</li>
+                        </ul>
+                        <p style="font-size: 15px">Once this is all done (2 business days), you can then login and check port scans results, and
+                        perform further investigations on discovered deltas.</p>
+                    </div>
+                    <!-- end col-6 -->
+                    <!-- begin col-6 -->
+                    <div class="col-md-6 form-col" data-animation="true" data-animation-type="fadeInRight">
+                        <h2 class="content-title">Contact Us</h2>
+                        <form id="contactform" method="post" class="form-horizontal">{% csrf_token %}
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Name <span class="text-theme">*</span></label>
+                                <div class="col-md-9">
+                                    {{ form.name }}
+                                </div>
+                            </div>
+                            <div class="errorbox">{{ form.name.errors }}</div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Email <span class="text-theme">*</span></label>
+                                <div class="col-md-9">
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                            <div class="errorbox">{{ form.email.errors }}</div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3">Message <span class="text-theme">*</span></label>
+                                <div class="col-md-9">
+                                    {{ form.message }}
+                                </div>
+                            </div>
+                            <div class="errorbox">{{ form.message.errors }}</div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3"></label>
+                                <div class="col-md-9 text-left">
+                                    <button type="submit"  class="btn btn-theme btn-block">Send Message</button>
+                                </div>
+                            </div>
+                            <div class="errorbox">{{ form.non_field_errors }}</div>
+                            <div id="result"></div>
+                        </form>
+                    </div>
+                    <!-- end col-6 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end #contact -->
+
+        <!-- begin #footer -->
+        <div id="footer" class="footer">
+            <div class="container">
+                <div id="footer-brand">
+                    <img src="{% static "/admin/assets/img/netdelta-logo.svg" %}" height="60" width="60">
+                    Netdelta
+                </div>
+                <p>
+                    &copy; Copyright 2018 - Seven Stones Information Security <br />
+                    An admin & front end theme with serious impact. Created by <a href="#">SeanTheme</a>
+                </p>
+                <p class="social-list">
+                    <a href="https://twitter.com/Seven_Stones"><i class="fa fa-twitter fa-fw"></i></a>
+                </p>
+            </div>
+        </div>
+        <!-- end #footer -->
+
+    <!-- end #page-container -->
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "admin/base_site.html" %}
+
+
+ {% block branding %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="jumbotron text-xs-center" style="width:700px;margin:auto;padding:30px">
+    <h2 class="display-3">Houston we have a problem.</h2>
+        <img class="float-right" style="margin-bottom: 30px" src="{% static "/admin/assets/img/500-internal-server-error.png" %}"
+             width="300" height="194" alt="500 image">
+        <p class="lead">An internal server error (500) was experienced, but we think you'll get over it.</p>
+        <p class="lead">If your query was about a new account provisioning,
+        we will be validating your addresses shortly and following the process as described
+            <a href="https://www.netdelta.io/#contact">here</a>.</p>
+    <div style="clear: both"></div>
+</div>
+
+{% endblock content %}
+

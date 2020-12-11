@@ -58,10 +58,10 @@ def thanks(request):
     html = render(request, 'admin/thanks.html', context)
     return html
 
-def handler404(request, exception):
+def handler404(request):
 
     context = {}
-    html = render(request, 'admin/500.html', context, status=404)
+    html = render(request, 'admin/404.html', context, status=404)
     return html
 
 def handler500(request):
